@@ -2,6 +2,10 @@
 	"name": "wxn0brp-vle",
 	"displayName": "Violet Libra Extension",
 	"description": "Publishes Markdown files to your VL server from VS Code",
+	"author": {
+		"name": "wxn0brP"
+	},
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wxn0brP/violet-libra-vle"
