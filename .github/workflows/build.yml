@@ -38,7 +38,7 @@ jobs:
 
       - name: Create or Update Latest Release
         id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: extension.vsix
           tag_name: latest
