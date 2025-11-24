@@ -1,0 +1,40 @@
+{
+	"name": "wxn0brp-vle",
+	"displayName": "Violet Libra Extension",
+	"description": "Publishes Markdown files to your VL server from VS Code",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wxn0brP/violet-libra-vle"
+	},
+	"homepage": "https://github.com/wxn0brP/violet-libra-vle",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.105.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "nya.publishMarkdown",
+				"title": "Publish VL Markdown"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"@types/vscode": "^1.105.0",
+		"typescript": "^5.9.3",
+		"vscode-test": "^1.6.1"
+	}
+}

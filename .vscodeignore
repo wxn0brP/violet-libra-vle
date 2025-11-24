@@ -1,0 +1,12 @@
+node_modules
+out/test
+.vscode
+.suglite_history
+package-lock.json
+yarn.lock
+bun.lock
+
+src
+.gitignore
+suglite.json
+tsconfig.json

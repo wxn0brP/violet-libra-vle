@@ -1,0 +1,8 @@
+node_modules
+out
+.vscode
+.suglite_history
+package-lock.json
+yarn.lock
+bun.lock
+*.vsix
