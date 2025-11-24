@@ -6,6 +6,8 @@
 		"name": "wxn0brP"
 	},
 	"license": "MIT",
+	"publisher": "wxn0brP",
+	"preview": true,
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wxn0brP/violet-libra-vle"
