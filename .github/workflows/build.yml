@@ -1,0 +1,51 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+concurrency:
+  group: build
+  cancel-in-progress: true
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install vsce
+        run: npm install -g vsce typescript
+
+      - name: Build extension
+        run: tsc
+
+      - name: Package extension
+        run: vsce package --out extension.vsix
+
+      - name: Create or Update Latest Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: extension.vsix
+          tag_name: latest
+          name: Latest Release
+          body: |
+            Automated release of the latest build.
+            Commit: ${{ github.sha }}
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
