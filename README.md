@@ -38,7 +38,7 @@ A VS Code extension that publishes Markdown files to your Violet Libra (VL) serv
 2. Add metadata at the beginning of the file in JSON format, separated from the content by `;;;`
 3. Example file structure:
 
-```json
+```md
 {
   "name": "my-markdown-file",
   "tags": ["documentation", "tutorial"],
